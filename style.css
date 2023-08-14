@@ -1,0 +1,24 @@
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #f00;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+div {
+    margin: 20px;
+}
+p {
+    color: darkgray;
+    font-size: large;
+    font-weight: bold;
+}
