@@ -19,6 +19,8 @@ public class Item {
     @Column(name = "quantity", nullable = false)
     private Integer quantity;
 
+    // description, sku, dateadded, update date, updatedby, currenctquantity
+
     public Item() {
 
     }

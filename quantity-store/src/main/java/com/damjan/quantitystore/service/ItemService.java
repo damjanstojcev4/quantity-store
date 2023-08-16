@@ -11,16 +11,13 @@ import java.util.List;
 @Service
 public class ItemService {
     private final ItemRepository itemRepository;
-    private final QuantityManager quantityManager;
 
     @Autowired
-    public ItemService(ItemRepository itemRepository, QuantityManager quantityManager) {
+    public ItemService(ItemRepository itemRepository) {
         this.itemRepository = itemRepository;
-        this.quantityManager = quantityManager;
     }
 
     public Item addItem(Item item) {
-        quantityManager.incrementQuantity();
         return itemRepository.save(item);
     }
 
@@ -32,7 +29,7 @@ public class ItemService {
         return itemRepository.findById(id).orElse(null);
     }
 
-    public void deleteItem(Integer id) {
+    public void deleteItem(Integer id) { // ne delete
         itemRepository.deleteById(id);
     }
 
