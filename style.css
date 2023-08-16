@@ -1,24 +1,27 @@
-table,
-th,
-td {
-    border: 1px solid black;
-    border-collapse: collapse;
-}
-
-th {
-    background-color: #f00;
-    color: white;
-}
-
-tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
 div {
-    margin: 20px;
+    margin:  20px;
 }
 p {
-    color: darkgray;
+    color: black;
     font-size: large;
     font-weight: bold;
+}
+button {
+    background-color: gray;
+    color: white;
+    width: 65px;
+    height: 35px;
+}
+button:hover {
+    background-color: black;
+}
+.read-button {
+    background-color: white;
+    width: 65px;
+    height: 21px;
+    color: black;
+}
+.read-button:hover{
+    background-color: black;
+    color: white;
 }
