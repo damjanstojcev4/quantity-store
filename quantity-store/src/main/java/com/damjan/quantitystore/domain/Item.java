@@ -5,19 +5,25 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
+import java.time.LocalDate;
 import java.util.Objects;
 
 @Entity
 @Table(name = "item")
 public class Item {
     @Id
-    private Integer id;
-    @Column(name = "article", nullable = false)
-    private String article;
-    @Column(name = "price", nullable = false)
-    private Integer price;
+    private Integer itemId;
+    @Column(name = "article_name", nullable = false)
+    private String articleName;
+    @Column(name = "sku")
+    private Long sku; // An SKU, short for "stock keeping unit", is a unique number combination used by retailers to identify and track products.
     @Column(name = "quantity", nullable = false)
     private Integer quantity;
+    @Column(name = "description")
+    private String description;
+
+    @Column(name = "date_added")
+    private LocalDate dateAdded;
 
     // description, sku, dateadded, update date, updatedby, currenctquantity
 
@@ -25,41 +31,31 @@ public class Item {
 
     }
 
-    public Item(String article, Integer price, Integer quantity) {
-        this.article = article;
-        this.price = price;
+    public Item(String article, Integer quantity) {
+        this.articleName = article;
         this.quantity = quantity;
     }
 
-    public Item(Integer id, String article, Integer price, Integer quantity) {
-        this.id = id;
-        this.article = article;
-        this.price = price;
+    public Item(Integer itemId, String article, Integer quantity) {
+        this.itemId = itemId;
+        this.articleName = article;
         this.quantity = quantity;
     }
 
-    public Integer getId() {
-        return id;
+    public Integer getItemId() {
+        return itemId;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setItemId(Integer itemId) {
+        this.itemId = itemId;
     }
 
-    public String getArticle() {
-        return article;
+    public String getArticleName() {
+        return articleName;
     }
 
-    public void setArticle(String article) {
-        this.article = article;
-    }
-
-    public Integer getPrice() {
-        return price;
-    }
-
-    public void setPrice(Integer price) {
-        this.price = price;
+    public void setArticleName(String articleName) {
+        this.articleName = articleName;
     }
 
     public Integer getQuantity() {
@@ -75,21 +71,20 @@ public class Item {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Item item = (Item) o;
-        return Objects.equals(id, item.id) && Objects.equals(article, item.article) &&
-                Objects.equals(price, item.price) && Objects.equals(quantity, item.quantity);
+        return Objects.equals(itemId, item.itemId) && Objects.equals(articleName, item.articleName) &&
+                Objects.equals(quantity, item.quantity);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, article, price, quantity);
+        return Objects.hash(itemId, articleName, quantity);
     }
 
     @Override
     public String toString() {
         return "Item{" +
-                "id=" + id +
-                ", article='" + article + '\'' +
-                ", price=" + price +
+                "itemId=" + itemId +
+                ", article='" + articleName + '\'' +
                 ", quantity=" + quantity +
                 '}';
     }
