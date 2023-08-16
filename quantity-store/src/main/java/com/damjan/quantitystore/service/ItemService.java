@@ -1,9 +1,10 @@
 package com.damjan.quantitystore.service;
 
+import com.damjan.quantitystore.domain.History;
 import com.damjan.quantitystore.domain.Item;
+import com.damjan.quantitystore.repository.HistoryRepository;
 import com.damjan.quantitystore.repository.ItemRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -11,10 +12,12 @@ import java.util.List;
 @Service
 public class ItemService {
     private final ItemRepository itemRepository;
+    private final HistoryRepository historyRepository;
 
     @Autowired
-    public ItemService(ItemRepository itemRepository) {
+    public ItemService(ItemRepository itemRepository, HistoryRepository historyRepository) {
         this.itemRepository = itemRepository;
+        this.historyRepository = historyRepository;
     }
 
     public Item addItem(Item item) {
@@ -29,15 +32,18 @@ public class ItemService {
         return itemRepository.findById(id).orElse(null);
     }
 
-    public void deleteItem(Integer id) { // ne delete
-        itemRepository.deleteById(id);
-    }
-
-    public void updateItemQuantity(Integer id, int newQuantity) {
-        Item item = itemRepository.findById(id).orElse(null);
+    public void updateItemQuantity(Integer itemId, int newQuantity, String updatedBy) {
+        Item item = itemRepository.findById(itemId).orElse(null);
         if (item != null) {
+            int oldQuantity = item.getQuantity();
             item.setQuantity(newQuantity);
-            itemRepository.save(item);
+            itemRepository.updateQuantity(newQuantity);
+
+            // Update ItemHistory's currentQuantity
+            History history = new History();
+            history.setCurrentQuantity(newQuantity);
+            history.setUpdatedBy(updatedBy);
+            historyRepository.updateQuantity(newQuantity);
         }
     }
 }
