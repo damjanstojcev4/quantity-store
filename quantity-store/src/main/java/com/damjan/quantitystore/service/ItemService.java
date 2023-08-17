@@ -28,22 +28,24 @@ public class ItemService {
         return itemRepository.findAll();
     }
 
-    public Item getItemById(Integer id) {
-        return itemRepository.findById(id).orElse(null);
-    }
-
-    public void updateItemQuantity(Integer itemId, int newQuantity, String updatedBy) {
-        Item item = itemRepository.findById(itemId).orElse(null);
-        if (item != null) {
-            int oldQuantity = item.getQuantity();
-            item.setQuantity(newQuantity);
-            itemRepository.updateQuantity(newQuantity);
-
-            // Update ItemHistory's currentQuantity
-            History history = new History();
-            history.setCurrentQuantity(newQuantity);
-            history.setUpdatedBy(updatedBy);
-            historyRepository.updateQuantity(newQuantity);
-        }
+//    public Item getItemById(Integer id) {
+//        return itemRepository.findById(id).orElse(null);
+//    }
+//
+//    public void updateItemQuantity(Integer itemId, int newQuantity) {
+//        Item item = itemRepository.findById(itemId).orElse(null);
+//        if (item != null) {
+//            int oldQuantity = item.getQuantity();
+//            item.setQuantity(newQuantity);
+//            itemRepository.updateQuantity(newQuantity);
+//
+//            // Update History's currentQuantity
+//            History history = new History();
+//            history.setCurrentQuantity(newQuantity);
+//            historyRepository.updateQuantity(newQuantity);
+//        }
+//    }
+    public List<Item> getItemBySku(Long sku) {
+        return itemRepository.findBySku(sku);
     }
 }

@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface HistoryRepository extends JpaRepository<History, Integer> {
-    @Modifying
-    @Query("UPDATE History i SET i.currentQuantity = :newQuantity WHERE i.id = :id")
-    void updateQuantity(Integer currentQuantity);
+//    @Modifying
+//    @Query("UPDATE History i SET i.currentQuantity = :newQuantity WHERE i.id = :id")
+//    void updateQuantity(Integer currentQuantity);
 }

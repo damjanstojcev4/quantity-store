@@ -11,7 +11,7 @@ public class History {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     @OneToOne(optional = false)
-    @JoinColumn(name = "sku")
+    @JoinColumn(name = "sku") // ??
     private Item sku;
     @Column(name = "current_quantity")
     private Integer currentQuantity;

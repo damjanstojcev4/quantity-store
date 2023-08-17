@@ -1,9 +1,6 @@
 package com.damjan.quantitystore.domain;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 import java.time.LocalDate;
 import java.util.Objects;
@@ -12,17 +9,19 @@ import java.util.Objects;
 @Table(name = "item")
 public class Item {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer itemId;
     @Column(name = "article_name", nullable = false)
     private String articleName;
-    @Column(name = "sku")
-    private Long sku; // An SKU, short for "stock keeping unit", is a unique number combination used by retailers to identify and track products.
+    @Column(name = "sku", nullable = false)
+    private Long sku; // An SKU, short for "stock keeping unit",
+    // is a unique number combination used by retailers to identify and track products.
     @Column(name = "quantity", nullable = false)
     private Integer quantity;
-    @Column(name = "description")
+    @Column(name = "description", nullable = false)
     private String description;
 
-    @Column(name = "date_added")
+    @Column(name = "date_added", nullable = false)
     private LocalDate dateAdded;
 
     // description, sku, dateadded, update date, updatedby, currenctquantity
@@ -31,15 +30,21 @@ public class Item {
 
     }
 
-    public Item(String article, Integer quantity) {
-        this.articleName = article;
+    public Item(String articleName, Long sku, Integer quantity, String description, LocalDate dateAdded) {
+        this.articleName = articleName;
+        this.sku = sku;
         this.quantity = quantity;
+        this.description = description;
+        this.dateAdded = dateAdded;
     }
 
-    public Item(Integer itemId, String article, Integer quantity) {
+    public Item(Integer itemId, String articleName, Long sku, Integer quantity, String description, LocalDate dateAdded) {
         this.itemId = itemId;
-        this.articleName = article;
+        this.articleName = articleName;
+        this.sku = sku;
         this.quantity = quantity;
+        this.description = description;
+        this.dateAdded = dateAdded;
     }
 
     public Integer getItemId() {

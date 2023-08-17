@@ -12,8 +12,9 @@ import java.util.Optional;
 @Repository
 public interface ItemRepository extends JpaRepository<Item, Integer> {
     List<Item>findAll();
-    Optional<Item>findById(Integer id);
-    @Modifying
-    @Query("UPDATE Item i SET i.quantity = :newQuantity WHERE i.itemId = :itemId")
-    void updateQuantity(Integer itemId);
+    List<Item>findBySku(Long sku);
+//    Optional<Item>findById(Integer id);
+//    @Modifying
+//    @Query("UPDATE Item i SET i.quantity = :newQuantity WHERE i.itemId = :itemId")
+//    void updateQuantity(Integer itemId);
 }
