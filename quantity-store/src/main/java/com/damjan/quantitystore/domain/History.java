@@ -13,24 +13,20 @@ public class History {
     @OneToOne(optional = false)
     @JoinColumn(name = "sku")
     private Item sku;
-    @Column(name = "updated_by", nullable = false)
-    private String updatedBy;
     @Column(name = "current_quantity")
     private Integer currentQuantity;
 
     public History() {
     }
 
-    public History(Item sku, String updatedBy, Integer currentQuantity) {
+    public History(Item sku, Integer currentQuantity) {
         this.sku = sku;
-        this.updatedBy = updatedBy;
         this.currentQuantity = currentQuantity;
     }
 
-    public History(Integer id, Item sku, String updatedBy, Integer currentQuantity) {
+    public History(Integer id, Item sku, Integer currentQuantity) {
         this.id = id;
         this.sku = sku;
-        this.updatedBy = updatedBy;
         this.currentQuantity = currentQuantity;
     }
 
@@ -50,13 +46,6 @@ public class History {
         this.sku = sku;
     }
 
-    public String getUpdatedBy() {
-        return updatedBy;
-    }
-
-    public void setUpdatedBy(String updatedBy) {
-        this.updatedBy = updatedBy;
-    }
 
     public Integer getCurrentQuantity() {
         return currentQuantity;
@@ -72,13 +61,12 @@ public class History {
         if (o == null || getClass() != o.getClass()) return false;
         History history = (History) o;
         return Objects.equals(id, history.id) && Objects.equals(sku, history.sku) &&
-                Objects.equals(updatedBy, history.updatedBy) &&
                 Objects.equals(currentQuantity, history.currentQuantity);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, sku, updatedBy, currentQuantity);
+        return Objects.hash(id, sku, currentQuantity);
     }
 
     @Override
@@ -86,7 +74,6 @@ public class History {
         return "History{" +
                 "id=" + id +
                 ", sku=" + sku +
-                ", updatedBy='" + updatedBy + '\'' +
                 ", currentQuantity=" + currentQuantity +
                 '}';
     }
