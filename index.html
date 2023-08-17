@@ -3,25 +3,32 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Link</title>
+    <title>Linkestida</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <h1>Linkesti</h1>
+    <h2>Add Article</h2>
     <div>
         <form id="form">
-            <p class="SKU">SKU <br /> 
-                <input type="text"/> <button class="read-button" type="button"
-                    onclick="loadOneBook()">Read</button>
-            </p>
             <p>Article <br />
-                <input type="text" id="title" value="" />
+                <input type="text" id="article" value="" /> <button class="read-button" type="button"
+                onclick="loadOneBook()">Read</button>
+            </p>
+            <p class="SKU">SKU <br /> 
+                <input type="text" id="sku"/> 
             </p>
             <p>Quantity <br />
-                <input type="text" id="isbn" value="" />
+                <input type="number" id="quantity" value="" />
             </p>
-            <br />
+            <p>Item Description<br/>
+            <textarea id="itemDescription" name="itemDescription" rows="4" required></textarea>
+            </p>
+            <p>Date Added<br />
+                <input type="date" id="quantity" value="" />
+            </p>
+            
             <button type="button" onclick="addBook()">Add</button>
             <button type="button" onclick="updateBook()">Update</button>
             <button type="button" onclick="deleteBook()">Delete</button>
