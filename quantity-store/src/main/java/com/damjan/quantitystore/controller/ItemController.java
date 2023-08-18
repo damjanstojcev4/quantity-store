@@ -19,4 +19,10 @@ public class ItemController {
     public List<Item> getAllItems() {
         return itemService.getAllItems();
     }
+
+    @GetMapping("/{sku}")
+    public Item getItemBySku(@PathVariable Long sku) {
+        return itemService.getItemBySku(sku);
+    }
+
 }
