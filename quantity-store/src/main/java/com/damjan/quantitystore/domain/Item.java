@@ -11,17 +11,15 @@ public class Item {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer itemId;
-    @Column(name = "article_name", nullable = false)
+    @Column(nullable = false)
     private String articleName;
-    @Column(name = "sku", nullable = false)
-    private Long sku; // An SKU, short for "stock keeping unit",
-    // is a unique number combination used by retailers to identify and track products.
-    @Column(name = "quantity", nullable = false)
+    @Column(nullable = false)
+    private Long sku;
+    @Column(nullable = false)
+    private Long price;
+    @Column(nullable = false)
     private Integer quantity;
-    @Column(name = "description", nullable = false)
-    private String description;
-
-    @Column(name = "date_added", nullable = false)
+    @Column(nullable = false)
     private LocalDate dateAdded;
 
     // description, sku, dateadded, update date, updatedby, currenctquantity
@@ -30,22 +28,14 @@ public class Item {
 
     }
 
-    public Item(String articleName, Long sku, Integer quantity, String description, LocalDate dateAdded) {
+    public Item(String articleName, Long sku, Long price, Integer quantity, LocalDate dateAdded) {
         this.articleName = articleName;
         this.sku = sku;
+        this.price = price;
         this.quantity = quantity;
-        this.description = description;
         this.dateAdded = dateAdded;
     }
 
-    public Item(Integer itemId, String articleName, Long sku, Integer quantity, String description, LocalDate dateAdded) {
-        this.itemId = itemId;
-        this.articleName = articleName;
-        this.sku = sku;
-        this.quantity = quantity;
-        this.description = description;
-        this.dateAdded = dateAdded;
-    }
 
     public Integer getItemId() {
         return itemId;
@@ -63,6 +53,22 @@ public class Item {
         this.articleName = articleName;
     }
 
+    public Long getSku() {
+        return sku;
+    }
+
+    public void setSku(Long sku) {
+        this.sku = sku;
+    }
+
+    public Long getPrice() {
+        return price;
+    }
+
+    public void setPrice(Long price) {
+        this.price = price;
+    }
+
     public Integer getQuantity() {
         return quantity;
     }
@@ -71,26 +77,36 @@ public class Item {
         this.quantity = quantity;
     }
 
+    public LocalDate getDateAdded() {
+        return dateAdded;
+    }
+
+    public void setDateAdded(LocalDate dateAdded) {
+        this.dateAdded = dateAdded;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Item item = (Item) o;
-        return Objects.equals(itemId, item.itemId) && Objects.equals(articleName, item.articleName) &&
-                Objects.equals(quantity, item.quantity);
+        return Objects.equals(itemId, item.itemId) && Objects.equals(articleName, item.articleName) && Objects.equals(sku, item.sku) && Objects.equals(price, item.price) && Objects.equals(quantity, item.quantity) && Objects.equals(dateAdded, item.dateAdded);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(itemId, articleName, quantity);
+        return Objects.hash(itemId, articleName, sku, price, quantity, dateAdded);
     }
 
     @Override
     public String toString() {
         return "Item{" +
                 "itemId=" + itemId +
-                ", article='" + articleName + '\'' +
+                ", articleName='" + articleName + '\'' +
+                ", sku=" + sku +
+                ", price=" + price +
                 ", quantity=" + quantity +
+                ", dateAdded=" + dateAdded +
                 '}';
     }
 }
