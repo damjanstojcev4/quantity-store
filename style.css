@@ -5,6 +5,7 @@ p {
     color: black;
     font-size: large;
     font-weight: bold;
+    text-align: center;
 }
 button {
     background-color: gray;
@@ -14,21 +15,13 @@ button {
 }
 button:hover {
     background-color: black;
-}
-.read-button {
-    background-color: white;
-    width: 65px;
-    height: 21px;
-    color: black;
-}
-.read-button:hover{
-    background-color: black;
-    color: white;
+    cursor: pointer;
 }
 h1 {
-    color: brown;
-
+    color: black;
+    text-align: center;
 }
 h2 {
-    color: brown;
+    color: black;
+    text-align: center;
 }
