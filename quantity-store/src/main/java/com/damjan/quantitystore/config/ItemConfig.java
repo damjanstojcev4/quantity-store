@@ -484,6 +484,49 @@ public class ItemConfig {
                     50,
                     LocalDate.now()
             );
+            Item item67 = new Item(
+                    "Kozhna Jakna",
+                    15020L,
+                    12300L,
+                    50,
+                    LocalDate.now()
+            );
+            Item item68 = new Item(
+                    "Sako",
+                    15004L,
+                    3100L,
+                    50,
+                    LocalDate.now()
+            );
+            Item item69 = new Item(
+                    "Kravata",
+                    16001L,
+                    750L,
+                    50,
+                    LocalDate.now()
+            );
+            Item item70 = new Item(
+                    "Kaish",
+                    16002L,
+                    390L,
+                    50,
+                    LocalDate.now()
+            );
+            Item item71 = new Item(
+                    "leptir",
+                    16003L,
+                    300L,
+                    50,
+                    LocalDate.now()
+            );
+            Item item72 = new Item(
+                    "Kravata",
+                    16003L,
+                    390L,
+                    50,
+                    LocalDate.now()
+            );
+
 
             itemRepository.saveAll(
                     List.of(item, item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11,item12,
@@ -491,7 +534,8 @@ public class ItemConfig {
                             item24, item25, item26, item27, item28, item29, item30, item31, item32, item33, item34,
                             item35, item36, item37, item38, item39, item40, item41, item42, item43, item44, item45,
                             item46, item47, item48, item49, item50, item51, item52, item53, item54, item55, item56,
-                            item57, item58, item59, item60, item61, item62, item63, item64, item65, item66)
+                            item57, item58, item59, item60, item61, item62, item63, item64, item65, item66, item67,
+                            item68, item69, item70, item71, item72)
             );
         };
     }
