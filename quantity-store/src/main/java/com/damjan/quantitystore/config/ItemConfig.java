@@ -519,13 +519,29 @@ public class ItemConfig {
                     50,
                     LocalDate.now()
             );
-            Item item72 = new Item(
-                    "Kravata",
-                    16003L,
-                    390L,
-                    50,
-                    LocalDate.now()
-            );
+//            Item item72 = new Item(
+//                    "Kravata",
+//                    55555L,
+//                    390L,
+//                    50,
+//                    LocalDate.now()
+//                    // IZMENET SKU
+//            );
+//            Item item73 = new Item(
+//                    "Igli za kravati",
+//                    77777L,
+//                    390L,
+//                    50,
+//                    LocalDate.now()
+//                    // IZMENET SKU
+//            );
+//            Item item74 = new Item(
+//                    "Elek i Marama",
+//                    16004L,
+//                    960L,
+//                    50,
+//                    LocalDate.now()
+//            );
 
 
             itemRepository.saveAll(
@@ -535,7 +551,7 @@ public class ItemConfig {
                             item35, item36, item37, item38, item39, item40, item41, item42, item43, item44, item45,
                             item46, item47, item48, item49, item50, item51, item52, item53, item54, item55, item56,
                             item57, item58, item59, item60, item61, item62, item63, item64, item65, item66, item67,
-                            item68, item69, item70, item71, item72)
+                            item68, item69, item70, item71)
             );
         };
     }
