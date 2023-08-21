@@ -55,6 +55,34 @@ h2 {
 }
 
 #data-table tbody tr:hover {
-    background-color: lightsteelblue;
+    background-color:lightsteelblue;
+}
+/* Style for the input elements */
+#form input[type="text"],
+#form input[type="number"] {
+    font-size: 20px; /* Adjust the font size as needed */
+    padding: 15px;   /* Adjust the padding to increase input height */
+    width: 25%;     /* Ensure the input takes up the full width */
+    box-sizing: border-box; /* Include padding in the width */
+}
+.custom-button {
+    padding: 25px 90px; /* Adjust padding to make the button longer */
+    font-size: 16px;
+    background-color: lightcoral;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.custom-button:hover {
+    background-color: coral;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
 }
 

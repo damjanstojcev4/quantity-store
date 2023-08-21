@@ -6,10 +6,12 @@
     <title>Home Linkestida</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body onloadeddata="loadAjaxArticle()">
+<body onload="loadAjaxArticle()">
 
-    <h1>Линкести</h1>
-    <h2>Дома</h2>
+    <div class="header">
+        <h1 class="center">Линкести</h1>
+        <button class="custom-button" onclick="window.location.href = 'addItem.html';">Додади Артикал</button>
+    </div>
     
     <table id="data-table" >
         <thead>
@@ -20,7 +22,7 @@
             </tr>
         </thead>
         <tbody id="table-body">
-            <!-- Table rows will be added here -->
+            
         </tbody>
     </table>
 
