@@ -28,12 +28,12 @@ public class ItemService {
         return itemRepository.save(item);
     }
 
-    public void updateItemQuantity(Integer itemId, int newQuantity) {
-        Item item = itemRepository.findById(itemId).orElse(null);
+    public void updateItemQuantity(Long sku, int quantity) {
+        Item item = itemRepository.findBySku(sku);
         if (item != null) {
             int oldQuantity = item.getQuantity();
-            item.setQuantity(newQuantity);
-            itemRepository.updateQuantity(newQuantity);
+            item.setQuantity(quantity);
+            itemRepository.updateQuantityBySku(sku, quantity);
         }
     }
 }
