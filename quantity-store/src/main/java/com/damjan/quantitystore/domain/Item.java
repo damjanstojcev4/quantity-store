@@ -19,8 +19,13 @@ public class Item {
     private Long price;
     @Column(nullable = false)
     private Integer quantity;
-    @Column(nullable = false)
+    @Column()
     private LocalDate dateAdded;
+
+    @PrePersist
+    protected void onCreate() {
+        dateAdded = LocalDate.now();
+    }
 
     // description, sku, dateadded, update date, updatedby, currenctquantity
 
