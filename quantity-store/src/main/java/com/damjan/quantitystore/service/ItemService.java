@@ -20,12 +20,12 @@ public class ItemService {
         return itemRepository.findAll();
     }
 
-    public Item addItem(Item item) {
-        return itemRepository.save(item);
-    }
-
     public Item getItemBySku(Long sku) {
         return itemRepository.findBySku(sku);
+    }
+
+    public Item addItem(Item item) {
+        return itemRepository.save(item);
     }
 
     public void updateItemQuantity(Integer itemId, int newQuantity) {
@@ -34,11 +34,6 @@ public class ItemService {
             int oldQuantity = item.getQuantity();
             item.setQuantity(newQuantity);
             itemRepository.updateQuantity(newQuantity);
-
-            // Update History's currentQuantity
-//            History history = new History();
-//            history.setCurrentQuantity(newQuantity);
-//            historyRepository.updateQuantity(newQuantity);
         }
     }
 }
