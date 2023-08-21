@@ -1,36 +1,40 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const addItemButton = document.getElementById("addItemButton");
-    addItemButton.addEventListener("click", addItem);
-});
+let url = "http://localhost:1010/linkesti/"
 
-function addItem() {
-    const itemName = document.getElementById("itemName").value;
-    const itemDescription = document.getElementById("itemDescription").value;
-    const itemPrice = parseFloat(document.getElementById("itemPrice").value);
-    const itemQuantity = parseInt(document.getElementById("itemQuantity").value);
+let init = {
+    mode: 'cors',
+    method: 'get',
+    headers: {
+       'Content-Type': 'application/json; charset=UTF-8',
+    }
+ };
 
-    const itemData = {
-        name: itemName,
-        description: itemDescription,
-        price: itemPrice,
-        quantity: itemQuantity
-    };
+// Function to create and populate the table
+function createTable(data) {
+    const tableBody = document.getElementById('table-body');
 
-    fetch("/api/addItem", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(itemData)
-    })
-    .then(response => response.json())
-    .then(data => {
-        alert("Item added successfully!");
-        // Clear form fields
-        document.getElementById("addItemForm").reset();
-    })
-    .catch(error => {
-        console.error("Error adding item:", error);
-        alert("Failed to add item. Please try again.");
+    data.forEach(item => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${item.articleName}</td>
+            <td>${item.sku}</td>
+            <td>${item.quantity}</td>
+        `;
+        tableBody.appendChild(row);
     });
 }
+
+// Load data using fetch
+fetch(url)
+    .then(response => response.json())
+    .then(data => createTable(data))
+    .catch(error => console.error('Error fetching data:', error));
+
+
+const editButtons = document.querySelectorAll('.editButtonHome');
+editButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        // Handle edit button click here
+        // For example, you can open a modal for editing
+        // or navigate to a dedicated edit page.
+    });
+});
