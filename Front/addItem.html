@@ -3,14 +3,17 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Add Item Linkestida</title>
+    <title>Add Item Продавница</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body onload="loadAjaxArticle()">
+<body>
     <h1>Линкести</h1>
     <h2>Додади Артикал</h2>
-    <button class="custom-button" onclick="window.location.href = 'home.html';">Дома</button>
+  
+        <button style="display: block; margin: 0 auto;" class="button-container" onclick="window.location.href = 'home.html';">Дома</button>
+
+  
     <div>
         <form id="form">
             <p>Артикал <br />
@@ -25,7 +28,7 @@
             
         <div class="button-container">
             <button type="button" onclick="addBook()">Add</button>
-            <button type="button" onclick="clearForm()">Clear</button>
+            <button type="button" onclick="clearForm()">Cancel</button>
         </div>
         </form>
     </div>

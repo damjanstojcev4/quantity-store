@@ -3,21 +3,21 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Home Linkestida</title>
+    <title>Home Продавница</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body onload="loadAjaxArticle()">
 
     <div class="header">
         <h1 class="center">Линкести</h1>
-        <button class="custom-button" onclick="window.location.href = 'addItem.html';">Додади Артикал</button>
+        <button class="button-container" onclick="window.location.href = 'addItem.html';">Додади Артикал</button>
     </div>
     
     <table id="data-table" >
         <thead>
             <tr>
                 <th>Артикал</th>
-                <th>Шифра</th>
+                <th>Шифра <input type="search" id="text"/></th>
                 <th>Количина</th>
             </tr>
         </thead>
