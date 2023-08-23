@@ -22,7 +22,7 @@ public class ItemController {
     }
 
     @GetMapping("/{sku}")
-    public Item getItemBySku(@PathVariable Long sku) {
+    public Item getItemBySku(@PathVariable Integer sku) {
         return itemService.getItemBySku(sku);
     }
 
