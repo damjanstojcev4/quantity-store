@@ -14,9 +14,9 @@ public class Item {
     @Column(nullable = false)
     private String articleName;
     @Column(nullable = false)
-    private Long sku;
+    private Integer sku;
     @Column(nullable = false)
-    private Long price;
+    private Integer price;
     @Column(nullable = false)
     private Integer quantity;
     @Column()
@@ -33,7 +33,7 @@ public class Item {
 
     }
 
-    public Item(String articleName, Long sku, Long price, Integer quantity, LocalDate dateAdded) {
+    public Item(String articleName, Integer sku, Integer price, Integer quantity, LocalDate dateAdded) {
         this.articleName = articleName;
         this.sku = sku;
         this.price = price;
@@ -58,19 +58,19 @@ public class Item {
         this.articleName = articleName;
     }
 
-    public Long getSku() {
+    public Integer getSku() {
         return sku;
     }
 
-    public void setSku(Long sku) {
+    public void setSku(Integer sku) {
         this.sku = sku;
     }
 
-    public Long getPrice() {
+    public Integer getPrice() {
         return price;
     }
 
-    public void setPrice(Long price) {
+    public void setPrice(Integer price) {
         this.price = price;
     }
 
