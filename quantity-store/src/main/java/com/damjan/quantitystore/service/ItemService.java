@@ -20,7 +20,7 @@ public class ItemService {
         return itemRepository.findAll();
     }
 
-    public Item getItemBySku(Long sku) {
+    public Item getItemBySku(Integer sku) {
         return itemRepository.findBySku(sku);
     }
 
@@ -28,7 +28,7 @@ public class ItemService {
         return itemRepository.save(item);
     }
 
-    public void updateItemQuantity(Long sku, int quantity) {
+    public void updateItemQuantity(Integer sku, int quantity) {
         Item item = itemRepository.findBySku(sku);
         if (item != null) {
             int oldQuantity = item.getQuantity();

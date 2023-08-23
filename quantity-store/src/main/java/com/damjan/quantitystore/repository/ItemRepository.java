@@ -13,10 +13,10 @@ import java.util.List;
 @Repository
 public interface ItemRepository extends JpaRepository<Item, Integer> {
     List<Item>findAll();
-    Item findBySku(Long sku);
+    Item findBySku(Integer sku);
     @Modifying
     @Query("UPDATE Item i SET i.quantity = :quantity WHERE i.sku = :sku")
-    void updateQuantityBySku(@Param("sku") Long sku, @Param("quantity") int quantity);
+    void updateQuantityBySku(@Param("sku") Integer sku, @Param("quantity") int quantity);
 
 
 }
