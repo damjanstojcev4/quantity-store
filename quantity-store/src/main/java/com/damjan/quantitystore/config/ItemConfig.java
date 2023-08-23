@@ -155,13 +155,13 @@ public class ItemConfig {
                     50,
                     LocalDate.now()
             );
-            Item item20 = new Item(
-                    "Bluza",
-                    13002,
-                    1400,
-                    50,
-                    LocalDate.now()
-            );
+//            Item item20 = new Item(
+//                    "Bluza",
+//                    13002,
+//                    1400,
+//                    50,
+//                    LocalDate.now()
+//            );
             Item item21 = new Item(
                     "Bluza",
                     13003,
@@ -176,20 +176,20 @@ public class ItemConfig {
                     50,
                     LocalDate.now()
             );
-            Item item23 = new Item(
-                    "Bluza",
-                    13005,
-                    1600,
-                    50,
-                    LocalDate.now()
-            );
-            Item item24 = new Item(
-                    "Bluza",
-                    13006,
-                    2150,
-                    50,
-                    LocalDate.now()
-            );
+//            Item item23 = new Item(
+//                    "Bluza",
+//                    13005,
+//                    1600,
+//                    50,
+//                    LocalDate.now()
+//            );
+//            Item item24 = new Item(
+//                    "Bluza",
+//                    13006,
+//                    2150,
+//                    50,
+//                    LocalDate.now()
+//            );
             Item item25 = new Item(
                     "Bluza",
                     13007,
@@ -197,13 +197,13 @@ public class ItemConfig {
                     50,
                     LocalDate.now()
             );
-            Item item26 = new Item(
-                    "Bluza",
-                    13008,
-                    1050,
-                    50,
-                    LocalDate.now()
-            );
+//            Item item26 = new Item(
+//                    "Bluza",
+//                    13008,
+//                    1050,
+//                    50,
+//                    LocalDate.now()
+//            );
             Item item27 = new Item(
                     "Bluza",
                     13010,
@@ -546,8 +546,8 @@ public class ItemConfig {
 
             itemRepository.saveAll(
                     List.of(item, item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11,item12,
-                            item13, item14, item15, item16, item17, item18, item19, item20, item21, item22, item23,
-                            item24, item25, item26, item27, item28, item29, item30, item31, item32, item33, item34,
+                            item13, item14, item15, item16, item17, item18, item19, item21, item22,
+                            item25, item27, item28, item29, item30, item31, item32, item33, item34,
                             item35, item36, item37, item38, item39, item40, item41, item42, item43, item44, item45,
                             item46, item47, item48, item49, item50, item51, item52, item53, item54, item55, item56,
                             item57, item58, item59, item60, item61, item62, item63, item64, item65, item66, item67,
