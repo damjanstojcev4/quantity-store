@@ -1,7 +1,9 @@
 package com.damjan.quantitystore.service;
 
 import com.damjan.quantitystore.domain.Item;
+import com.damjan.quantitystore.exceptions.SkuNotFoundException;
 import com.damjan.quantitystore.repository.ItemRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,14 +23,19 @@ public class ItemService {
     }
 
     public Item getItemBySku(Integer sku) {
-        return itemRepository.findBySku(sku);
+        Item item = itemRepository.findBySku(sku);
+        if (item == null) {
+            throw new SkuNotFoundException(sku);
+        }
+        return item;
     }
 
     public Item addItem(Item item) {
         return itemRepository.save(item);
     }
 
-    public void updateItemQuantity(Integer sku, int quantity) {
+    @Transactional
+    public void updateItemQuantity(Integer sku, Integer quantity) {
         Item item = itemRepository.findBySku(sku);
         if (item != null) {
             int oldQuantity = item.getQuantity();
