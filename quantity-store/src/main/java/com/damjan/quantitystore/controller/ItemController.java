@@ -3,6 +3,7 @@ package com.damjan.quantitystore.controller;
 import com.damjan.quantitystore.domain.Item;
 import com.damjan.quantitystore.service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
@@ -29,6 +30,12 @@ public class ItemController {
     @PostMapping("/add")
     public Item addArticle(@RequestBody Item item) {
         return itemService.addItem(item);
+    }
+
+    @PutMapping("/update")
+    public ResponseEntity<String> updateItemQuantity(@RequestParam Integer sku, @RequestParam Integer quantity) {
+        itemService.updateItemQuantity(sku, quantity);
+        return ResponseEntity.ok("Item quantity updated successfully");
     }
 
 }
