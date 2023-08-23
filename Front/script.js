@@ -27,31 +27,49 @@ fetch(url)
     .then(data => createTable(data))
     .catch(error => console.error('Error fetching data:', error));
 
-function loadOneSku(event) {
+    function prepareTableRow(json) {
+        let newRow = document.createElement("tr");
+        
+        let articleCell = document.createElement("td");
+        articleCell.textContent = json.articleName;
+        newRow.appendChild(articleCell);
+        
+        let skuCell = document.createElement("td");
+        skuCell.textContent = json.sku;
+        newRow.appendChild(skuCell);
+        
+        let quantityCell = document.createElement("td");
+        quantityCell.textContent = json.quantity;
+        newRow.appendChild(quantityCell);
+        
+        document.getElementById("table-body").innerHTML = ""; // Clear existing rows
+        document.getElementById("table-body").appendChild(newRow);
+    }
+    
+    function loadOneSku(event) {
         if (event.key == 'Enter') {
             event.preventDefault();
     
             let skuInput = document.getElementById("sku");
             let sku = skuInput.value;
-            
+    
             console.log(url + sku);
     
             fetch(url + sku)
                 .then(response => response.json())
                 .then(json => {
-                    prepareArticle(json);
-                    createTable(json);
+                    prepareTableRow(json);
                 })
                 .catch(error => {
                     console.error("Error fetching SKU:", error);
                 });
         }
-}
+    }
 
 function prepareArticle(json) {
-    document.getElementById("article").value = json.articleName;
-    document.getElementById("sku").value = json.sku;
-    document.getElementById("quantity").value = json.quantity;
+        document.getElementById("articleName").textContent = json.articleName;
+        document.getElementById("sku").value = json.sku;
+        document.getElementById("quantity").textContent = json.quantity;  
     
     item = {
        articleName: json.articleName,

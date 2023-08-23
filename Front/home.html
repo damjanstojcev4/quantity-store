@@ -16,9 +16,9 @@
     <table id="data-table" >
         <thead>
             <tr>
-                <th class="sticky">Артикал</th>
-                <th class="sticky">Шифра <input type="number" id="sku" onkeypress="loadOneSku(event)"/></th>
-                <th class="sticky">Количина</th>
+                <th class="sticky" id="articalName">Артикал</th>
+                <th class="sticky">Шифра <input type="number" id="sku" onkeydown="loadOneSku(event)"/></th>
+                <th class="sticky" id="quantity">Количина</th>
             </tr>
         </thead>
         <tbody id="table-body">
@@ -26,8 +26,8 @@
         </tbody>
     </table>
 
-    <script src="ajax.js"></script>
     <script src="script.js"></script>
+    <script src="ajax.js"></script>
 </body>
 
 </html>
