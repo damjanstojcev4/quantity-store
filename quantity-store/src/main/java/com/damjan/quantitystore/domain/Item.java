@@ -13,7 +13,7 @@ public class Item {
     private Integer itemId;
     @Column(nullable = false)
     private String articleName;
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
     private Integer sku;
     @Column(nullable = false)
     private Integer price;
