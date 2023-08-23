@@ -17,505 +17,505 @@ public class ItemConfig {
         return args -> {
             Item item = new Item(
                     "Kostum",
-                    11001L,
-                    7950L,
+                    11001,
+                    7950,
                     27,
                     LocalDate.now()
             );
             Item item1 = new Item(
                     "Sako",
-                    13002L,
-                    9500L,
+                    13002,
+                    9500,
                     20,
                     LocalDate.now()
             );
             Item item2 = new Item(
                     "Kostum",
-                    13005L,
-                    6150L,
+                    13005,
+                    6150,
                     45,
                     LocalDate.now()
             );
             Item item3 = new Item(
                     "Kostum",
-                    13006L,
-                    5200L,
+                    13006,
+                    5200,
                     50,
                     LocalDate.now()
             );
             Item item4 = new Item(
                     "Kostum",
-                    13008L,
-                    8500L,
+                    13008,
+                    8500,
                     50,
                     LocalDate.now()
             );
             Item item5 = new Item(
                     "Kostum",
-                    13018L,
-                    7700L,
+                    13018,
+                    7700,
                     50,
                     LocalDate.now()
             );
             Item item6 = new Item(
                     "Kostum",
-                    13019L,
-                    6850L,
+                    13019,
+                    6850,
                     50,
                     LocalDate.now()
             );
             Item item7 = new Item(
                     "Kostum",
-                    13020L,
-                    5500L,
+                    13020,
+                    5500,
                     50,
                     LocalDate.now()
             );
             Item item8 = new Item(
                     "Kostum",
-                    13030L,
-                    10500L,
+                    13030,
+                    10500,
                     50,
                     LocalDate.now()
             );
             Item item9 = new Item(
                     "Kostum",
-                    13031L,
-                    9900L,
+                    13031,
+                    9900,
                     50,
                     LocalDate.now()
             );
             Item item10 = new Item(
                     "Kosula",
-                    12001L,
-                    1450L,
+                    12001,
+                    1450,
                     50,
                     LocalDate.now()
             );
             Item item11 = new Item(
                     "Kosula",
-                    12004L,
-                    1750L,
+                    12004,
+                    1750,
                     50,
                     LocalDate.now()
             );
             Item item12 = new Item(
                     "Kosula",
-                    12005L,
-                    1250L,
+                    12005,
+                    1250,
                     50,
                     LocalDate.now()
             );
             Item item13 = new Item(
                     "Kosula",
-                    12006L,
-                    950L,
+                    12006,
+                    950,
                     50,
                     LocalDate.now()
             );
             Item item14 = new Item(
                     "Kosula",
-                    12009L,
-                    650L,
+                    12009,
+                    650,
                     50,
                     LocalDate.now()
             );
             Item item15 = new Item(
                     "Kosula",
-                    12010L,
-                    450L,
+                    12010,
+                    450,
                     50,
                     LocalDate.now()
             );
             Item item16 = new Item(
                     "Kosula",
-                    12012L,
-                    750L,
+                    12012,
+                    750,
                     50,
                     LocalDate.now()
             );
             Item item17 = new Item(
                     "Kosula",
-                    12014L,
-                    2500L,
+                    12014,
+                    2500,
                     50,
                     LocalDate.now()
             );
             Item item18 = new Item(
                     "Kosula",
-                    12019L,
-                    500L,
+                    12019,
+                    500,
                     50,
                     LocalDate.now()
             );
             Item item19 = new Item(
                     "Bluza",
-                    13001L,
-                    1250L,
+                    13001,
+                    1250,
                     50,
                     LocalDate.now()
             );
             Item item20 = new Item(
                     "Bluza",
-                    13002L,
-                    1400L,
+                    13002,
+                    1400,
                     50,
                     LocalDate.now()
             );
             Item item21 = new Item(
                     "Bluza",
-                    13003L,
-                    1500L,
+                    13003,
+                    1500,
                     50,
                     LocalDate.now()
             );
             Item item22 = new Item(
                     "Bluza",
-                    13004L,
-                    1850L,
+                    13004,
+                    1850,
                     50,
                     LocalDate.now()
             );
             Item item23 = new Item(
                     "Bluza",
-                    13005L,
-                    1600L,
+                    13005,
+                    1600,
                     50,
                     LocalDate.now()
             );
             Item item24 = new Item(
                     "Bluza",
-                    13006L,
-                    2150L,
+                    13006,
+                    2150,
                     50,
                     LocalDate.now()
             );
             Item item25 = new Item(
                     "Bluza",
-                    13007L,
-                    2350L,
+                    13007,
+                    2350,
                     50,
                     LocalDate.now()
             );
             Item item26 = new Item(
                     "Bluza",
-                    13008L,
-                    1050L,
+                    13008,
+                    1050,
                     50,
                     LocalDate.now()
             );
             Item item27 = new Item(
                     "Bluza",
-                    13010L,
-                    2950L,
+                    13010,
+                    2950,
                     50,
                     LocalDate.now()
             );
             Item item28 = new Item(
                     "Bluza",
-                    13011L,
-                    1450L,
+                    13011,
+                    1450,
                     50,
                     LocalDate.now()
             );
             Item item29 = new Item(
                     "Bluza",
-                    13013L,
-                    950L,
+                    13013,
+                    950,
                     50,
                     LocalDate.now()
             );
             Item item30 = new Item(
                     "Bluza",
-                    13026L,
-                    1450L,
+                    13026,
+                    1450,
                     30,
                     LocalDate.now()
             );
             Item item31 = new Item(
                     "Maici",
-                    17001L,
-                    1250L,
+                    17001,
+                    1250,
                     30,
                     LocalDate.now()
             );
             Item item32 = new Item(
                     "Maici",
-                    17002L,
-                    750L,
+                    17002,
+                    750,
                     40,
                     LocalDate.now()
             );
             Item item33 = new Item(
                     "Maici",
-                    17003L,
-                    1500L,
+                    17003,
+                    1500,
                     40,
                     LocalDate.now()
             );
             Item item34 = new Item(
                     "Maici",
-                    17006L,
-                    950L,
+                    17006,
+                    950,
                     40,
                     LocalDate.now()
             );
             Item item35 = new Item(
                     "Maici",
-                    17007L,
-                    500L,
+                    17007,
+                    500,
                     40,
                     LocalDate.now()
             );
             Item item36 = new Item(
                     "Pantolon",
-                    14001L,
-                    1600L,
+                    14001,
+                    1600,
                     40,
                     LocalDate.now()
             );
             Item item37 = new Item(
                     "Pantolon",
-                    14002L,
-                    1950L,
+                    14002,
+                    1950,
                     40,
                     LocalDate.now()
             );
             Item item38 = new Item(
                     "Pantolon",
-                    14003L,
-                    1750L,
+                    14003,
+                    1750,
                     50,
                     LocalDate.now()
             );
             Item item39 = new Item(
                     "Pantolon",
-                    14004L,
-                    950L,
+                    14004,
+                    950,
                     50,
                     LocalDate.now()
             );
             Item item40 = new Item(
                     "Pantolon",
-                    14005L,
-                    500L,
+                    14005,
+                    500,
                     50,
                     LocalDate.now()
             );
             Item item41 = new Item(
                     "Pantolon",
-                    14006L,
-                    750L,
+                    14006,
+                    750,
                     50,
                     LocalDate.now()
             );
             Item item42 = new Item(
                     "Pantolon",
-                    14007L,
-                    2150L,
+                    14007,
+                    2150,
                     50,
                     LocalDate.now()
             );
             Item item43 = new Item(
                     "Pantolon",
-                    14008L,
-                    2350L,
+                    14008,
+                    2350,
                     50,
                     LocalDate.now()
             );
             Item item44 = new Item(
                     "Pantolon",
-                    14009L,
-                    1120L,
+                    14009,
+                    1120,
                     50,
                     LocalDate.now()
             );
             Item item45 = new Item(
                     "Pantolon",
-                    14010L,
-                    1500L,
+                    14010,
+                    1500,
                     50,
                     LocalDate.now()
             );
             Item item46 = new Item(
                     "Pantolon",
-                    14011L,
-                    1250L,
+                    14011,
+                    1250,
                     50,
                     LocalDate.now()
             );
             Item item47 = new Item(
                     "Pantolon",
-                    14012L,
-                    1250L,
+                    14012,
+                    1250,
                     50,
                     LocalDate.now()
             );
             Item item48 = new Item(
                     "Pantolon",
-                    14013L,
-                    1320L,
+                    14013,
+                    1320,
                     50,
                     LocalDate.now()
             );
             Item item49 = new Item(
                     "Pantolon",
-                    14014L,
-                    1450L,
+                    14014,
+                    1450,
                     50,
                     LocalDate.now()
             );
             Item item50 = new Item(
                     "Pantolon",
-                    14015L,
-                    1250L,
+                    14015,
+                    1250,
                     50,
                     LocalDate.now()
             );
             Item item51 = new Item(
                     "Pantolon",
-                    14018L,
-                    450L,
+                    14018,
+                    450,
                     50,
                     LocalDate.now()
             );
             Item item52 = new Item(
                     "Palto",
-                    15001L,
-                    6500L,
+                    15001,
+                    6500,
                     50,
                     LocalDate.now()
             );
             Item item53 = new Item(
                     "Palto",
-                    15002L,
-                    6900L,
+                    15002,
+                    6900,
                     50,
                     LocalDate.now()
             );
             Item item54 = new Item(
                     "Palto",
-                    15005L,
-                    4950L,
+                    15005,
+                    4950,
                     50,
                     LocalDate.now()
             );
             Item item55 = new Item(
                     "Palto",
-                    15007L,
-                    4950L,
+                    15007,
+                    4950,
                     50,
                     LocalDate.now()
             );
             Item item56 = new Item(
                     "Palto",
-                    15013L,
-                    6150L,
+                    15013,
+                    6150,
                     50,
                     LocalDate.now()
             );
             Item item57 = new Item(
                     "Jakna",
-                    15003L,
-                    2800L,
+                    15003,
+                    2800,
                     50,
                     LocalDate.now()
             );
             Item item58 = new Item(
                     "Jakna",
-                    15006L,
-                    4550L,
+                    15006,
+                    4550,
                     50,
                     LocalDate.now()
             );
             Item item59 = new Item(
                     "Jakna",
-                    15008L,
-                    1500L,
+                    15008,
+                    1500,
                     50,
                     LocalDate.now()
             );
             Item item60 = new Item(
                     "Jakna",
-                    15011L,
-                    3500L,
+                    15011,
+                    3500,
                     50,
                     LocalDate.now()
             );
             Item item61 = new Item(
                     "Jakna",
-                    15012L,
-                    1950L,
+                    15012,
+                    1950,
                     50,
                     LocalDate.now()
             );
             Item item62 = new Item(
                     "Jakna",
-                    15014L,
-                    5600L,
+                    15014,
+                    5600,
                     50,
                     LocalDate.now()
             );
             Item item63 = new Item(
                     "Jakna",
-                    15017L,
-                    2000L,
+                    15017,
+                    2000,
                     50,
                     LocalDate.now()
             );
             Item item64 = new Item(
                     "Jakna",
-                    15018L,
-                    3950L,
+                    15018,
+                    3950,
                     50,
                     LocalDate.now()
             );
             Item item65 = new Item(
                     "Jakna",
-                    15019L,
-                    950L,
+                    15019,
+                    950,
                     50,
                     LocalDate.now()
             );
             Item item66 = new Item(
                     "Jakna",
-                    15034L,
-                    1250L,
+                    15034,
+                    1250,
                     50,
                     LocalDate.now()
             );
             Item item67 = new Item(
                     "Kozhna Jakna",
-                    15020L,
-                    12300L,
+                    15020,
+                    12300,
                     50,
                     LocalDate.now()
             );
             Item item68 = new Item(
                     "Sako",
-                    15004L,
-                    3100L,
+                    15004,
+                    3100,
                     50,
                     LocalDate.now()
             );
             Item item69 = new Item(
                     "Kravata",
-                    16001L,
-                    750L,
+                    16001,
+                    750,
                     50,
                     LocalDate.now()
             );
             Item item70 = new Item(
                     "Kaish",
-                    16002L,
-                    390L,
+                    16002,
+                    390,
                     50,
                     LocalDate.now()
             );
             Item item71 = new Item(
                     "leptir",
-                    16003L,
-                    300L,
+                    16003,
+                    300,
                     50,
                     LocalDate.now()
             );
