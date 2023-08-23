@@ -6,7 +6,7 @@
     <title>Home Продавница</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body onload="loadAjaxArticle()">
+<body >
 
     <div class="header">
         <h1 class="center">Линкести</h1>
@@ -17,8 +17,8 @@
         <thead>
             <tr>
                 <th class="sticky" id="articalName">Артикал</th>
-                <th class="sticky">Шифра <input type="number" id="sku" onkeydown="loadOneSku(event)"/></th>
-                <th class="sticky" id="quantity">Количина</th>
+                <th class="sticky">Шифра <input type="number" id="sku" onkeyup="loadOneSku(event)"/></th>
+                <th class="sticky" id="quantity" colspan="2">Количина</th>
             </tr>
         </thead>
         <tbody id="table-body">

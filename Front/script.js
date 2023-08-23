@@ -17,9 +17,14 @@ function createTable(data) {
             <td>${item.articleName}</td>
             <td>${item.sku}</td>
             <td>${item.quantity}</td>
+            <td><button onclick="clickButton(${item.quantity},'${item.articleName}')">Edit</button></td>
         `;
         tableBody.appendChild(row);
     });
+}
+
+function clickButton(quantity, name){
+    alert(`${name} ${quantity}`);
 }
 
 fetch(url)
@@ -63,6 +68,14 @@ fetch(url)
                 .catch(error => {
                     console.error("Error fetching SKU:", error);
                 });
+        }
+     
+        if(event.target.value==''){
+            document.getElementById("table-body").innerHTML = ""
+            fetch(url)
+    .then(response => response.json())
+    .then(data => createTable(data))
+    .catch(error => console.error('Error fetching data:', error));
         }
     }
 
