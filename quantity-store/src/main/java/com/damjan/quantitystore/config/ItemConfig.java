@@ -155,13 +155,13 @@ public class ItemConfig {
                     50,
                     LocalDate.now()
             );
-//            Item item20 = new Item(
-//                    "Bluza",
-//                    13002,
-//                    1400,
-//                    50,
-//                    LocalDate.now()
-//            );
+            Item item20 = new Item(
+                    "Bluza",
+                    18001, // Nov SKU
+                    1400,
+                    50,
+                    LocalDate.now()
+            );
             Item item21 = new Item(
                     "Bluza",
                     13003,
@@ -176,20 +176,20 @@ public class ItemConfig {
                     50,
                     LocalDate.now()
             );
-//            Item item23 = new Item(
-//                    "Bluza",
-//                    13005,
-//                    1600,
-//                    50,
-//                    LocalDate.now()
-//            );
-//            Item item24 = new Item(
-//                    "Bluza",
-//                    13006,
-//                    2150,
-//                    50,
-//                    LocalDate.now()
-//            );
+            Item item23 = new Item(
+                    "Bluza",
+                    18002, // Nov sku
+                    1600,
+                    50,
+                    LocalDate.now()
+            );
+            Item item24 = new Item(
+                    "Bluza",
+                    18003, // nov sku
+                    2150,
+                    50,
+                    LocalDate.now()
+            );
             Item item25 = new Item(
                     "Bluza",
                     13007,
@@ -197,13 +197,13 @@ public class ItemConfig {
                     50,
                     LocalDate.now()
             );
-//            Item item26 = new Item(
-//                    "Bluza",
-//                    13008,
-//                    1050,
-//                    50,
-//                    LocalDate.now()
-//            );
+            Item item26 = new Item(
+                    "Bluza",
+                    18004, // nov sku
+                    1050,
+                    50,
+                    LocalDate.now()
+            );
             Item item27 = new Item(
                     "Bluza",
                     13010,
@@ -519,39 +519,270 @@ public class ItemConfig {
                     50,
                     LocalDate.now()
             );
-//            Item item72 = new Item(
-//                    "Kravata",
-//                    55555L,
-//                    390L,
-//                    50,
-//                    LocalDate.now()
-//                    // IZMENET SKU
-//            );
-//            Item item73 = new Item(
-//                    "Igli za kravati",
-//                    77777L,
-//                    390L,
-//                    50,
-//                    LocalDate.now()
-//                    // IZMENET SKU
-//            );
-//            Item item74 = new Item(
-//                    "Elek i Marama",
-//                    16004L,
-//                    960L,
-//                    50,
-//                    LocalDate.now()
-//            );
-
+            Item item72 = new Item(
+                    "Kravata",
+                    18005, // IZMENET SKU
+                    390,
+                    50,
+                    LocalDate.now()
+            );
+            Item item73 = new Item(
+                    "Igli za kravati",
+                    18006, // nov sku
+                    390,
+                    50,
+                    LocalDate.now()
+            );
+            Item item74 = new Item(
+                    "Elek i Marama",
+                    18007, // nov sku
+                    960,
+                    50,
+                    LocalDate.now()
+            );
+            Item item75 = new Item(
+                    "Shal",
+                    18008, // nov sku
+                    500,
+                    50,
+                    LocalDate.now()
+            );
+            Item item76 = new Item(
+                    "Kravata",
+                    18009, // nov sku
+                    500,
+                    50,
+                    LocalDate.now()
+            );
+            Item item77 = new Item(
+                    "Novcanik",
+                    18010, // nov sku
+                    500,
+                    50,
+                    LocalDate.now()
+            );
+            Item item78 = new Item(
+                    "Kravata",
+                    16006,
+                    950,
+                    50,
+                    LocalDate.now()
+            );
+            Item item79 = new Item(
+                    "Futroli",
+                    16007,
+                    250,
+                    50,
+                    LocalDate.now()
+            );
+            Item item80 = new Item(
+                    "Kaish",
+                    16008,
+                    790,
+                    50,
+                    LocalDate.now()
+            );
+            Item item81 = new Item(
+                    "Kopcinja",
+                    16009,
+                    1300,
+                    50,
+                    LocalDate.now()
+            );
+            Item item82 = new Item(
+                    "Kopcinja",
+                    16010,
+                    610,
+                    50,
+                    LocalDate.now()
+            );
+            Item item83 = new Item(
+                    "Kopcinja",
+                    16011,
+                    950,
+                    50,
+                    LocalDate.now()
+            );
+            Item item84 = new Item(
+                    "Novcanik",
+                    18011,
+                    950,
+                    50,
+                    LocalDate.now()
+            );
+            Item item85 = new Item(
+                    "Pojas",
+                    18012,
+                    950,
+                    50,
+                    LocalDate.now()
+            );
+            Item item86 = new Item(
+                    "Tregeri",
+                    18013,
+                    950,
+                    50,
+                    LocalDate.now()
+            );
+            Item item87 = new Item(
+                    "Marama",
+                    18014,
+                    950,
+                    50,
+                    LocalDate.now()
+            );
+            Item item88 = new Item(
+                    "Komplet Novcanik",
+                    16012,
+                    650,
+                    50,
+                    LocalDate.now()
+            );
+            Item item89 = new Item(
+                    "Remen",
+                    16013,
+                    950,
+                    50,
+                    LocalDate.now()
+            );
+            Item item90 = new Item(
+                    "Cador Mal",
+                    16014,
+                    650,
+                    50,
+                    LocalDate.now()
+            );
+            Item item91 = new Item(
+                    "Cador Sreden",
+                    16015,
+                    750,
+                    50,
+                    LocalDate.now()
+            );
+            Item item92 = new Item(
+                    "Cador Golem",
+                    16016,
+                    950,
+                    50,
+                    LocalDate.now()
+            );
+            Item item93 = new Item(
+                    "Kopcinja",
+                    16017,
+                    430,
+                    50,
+                    LocalDate.now()
+            );
+            Item item94 = new Item(
+                    "Kutii Mali",
+                    16018,
+                    410,
+                    50,
+                    LocalDate.now()
+            );
+            Item item95 = new Item(
+                    "Kutii Golemi",
+                    16019,
+                    560,
+                    50,
+                    LocalDate.now()
+            );
+            Item item96 = new Item(
+                    "Narakvici",
+                    16020,
+                    1500,
+                    50,
+                    LocalDate.now()
+            );
+            Item item97 = new Item(
+                    "Kapa",
+                    16021,
+                    500,
+                    50,
+                    LocalDate.now()
+            );
+            Item item98 = new Item(
+                    "Elek",
+                    16022,
+                    2500,
+                    50,
+                    LocalDate.now()
+            );
+            Item item99 = new Item(
+                    "Remen",
+                    16023,
+                    890,
+                    50,
+                    LocalDate.now()
+            );
+            Item item100 = new Item(
+                    "Pojas",
+                    16024,
+                    950,
+                    50,
+                    LocalDate.now()
+            );
+            Item item101 = new Item(
+                    "Pojas",
+                    16025,
+                    1250,
+                    50,
+                    LocalDate.now()
+            );
+            Item item102 = new Item(
+                    "Kaish",
+                    16027,
+                    500,
+                    50,
+                    LocalDate.now()
+            );
+            Item item103 = new Item(
+                    "Kapa",
+                    16028,
+                    950,
+                    50,
+                    LocalDate.now()
+            );
+            Item item104 = new Item(
+                    "Kravata-Leptir",
+                    16029,
+                    100,
+                    50,
+                    LocalDate.now()
+            );
+            Item item105 = new Item(
+                    "Remen",
+                    16036,
+                    850,
+                    50,
+                    LocalDate.now()
+            );
+            Item item106 = new Item(
+                    "Pojas",
+                    16048,
+                    1250,
+                    50,
+                    LocalDate.now()
+            );
+            Item item107 = new Item(
+                    "Marama",
+                    16049,
+                    950,
+                    50,
+                    LocalDate.now()
+            );
 
             itemRepository.saveAll(
-                    List.of(item, item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11,item12,
-                            item13, item14, item15, item16, item17, item18, item19, item21, item22,
-                            item25, item27, item28, item29, item30, item31, item32, item33, item34,
+                    List.of(item, item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, item12,
+                            item13, item14, item15, item16, item17, item18, item19, item20, item21, item22, item23,
+                            item24, item25, item26, item27, item28, item29, item30, item31, item32, item33, item34,
                             item35, item36, item37, item38, item39, item40, item41, item42, item43, item44, item45,
                             item46, item47, item48, item49, item50, item51, item52, item53, item54, item55, item56,
                             item57, item58, item59, item60, item61, item62, item63, item64, item65, item66, item67,
-                            item68, item69, item70, item71)
+                            item68, item69, item70, item71, item72, item73, item74, item75, item76, item77, item78,
+                            item79, item80, item81, item82, item83, item84, item85, item86, item87, item88, item89,
+                            item90, item91, item92, item93, item94, item95, item96, item97, item98, item99, item100,
+                            item101, item102, item103, item104, item105, item106, item107)
             );
         };
     }
