@@ -1,4 +1,5 @@
 let url = "http://localhost:1010/linkesti/"
+let url1 = "http://localhost:1010/linkesti/add"
 
 let init = {
     mode: 'cors',
@@ -32,7 +33,7 @@ fetch(url)
     .then(data => createTable(data))
     .catch(error => console.error('Error fetching data:', error));
 
-    function prepareTableRow(json) {
+function prepareTableRow(json) {
         let newRow = document.createElement("tr");
         
         let articleCell = document.createElement("td");
@@ -49,9 +50,9 @@ fetch(url)
         
         document.getElementById("table-body").innerHTML = ""; // Clear existing rows
         document.getElementById("table-body").appendChild(newRow);
-    }
+}
     
-    function loadOneSku(event) {
+function loadOneSku(event) {
         if (event.key == 'Enter') {
             event.preventDefault();
     
@@ -77,7 +78,7 @@ fetch(url)
     .then(data => createTable(data))
     .catch(error => console.error('Error fetching data:', error));
         }
-    }
+}
 
 function prepareArticle(json) {
         document.getElementById("articleName").textContent = json.articleName;
@@ -89,4 +90,23 @@ function prepareArticle(json) {
        sku: json.sku,
        quantity: json.quantity
     }
+ }
+
+ function addItem() {
+    //const item = getFormData();
+    // item.articleName = [{ id: document.getElementById("articleName").value }]
+    // item.sku = [{ id: document.getElementById("sku").value }]
+    // item.quantity = [{ id: document.getElementById("quantity").value }]
+ 
+    init.method = 'post';
+
+    const articleData = {
+        "articleName": document.getElementById("articleName").value,
+        "sku": document.getElementById("sku").value,
+        "price": document.getElementById("price").value,
+        "quantity": document.getElementById("quantity").value
+    }
+ 
+    init.body = JSON.stringify(articleData);
+    fetch(url1, init).then(() => console.log("Success"));
  }

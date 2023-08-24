@@ -3,6 +3,10 @@ p {
     font-size: 30px;
     font-weight: bold;
     text-align: center;
+    font-family: 'Barriecito', cursive;
+    font-family: 'Neuton', serif;
+    font-family: 'Pangolin', cursive;
+    font-family: 'Roboto', sans-serif;
 }
 button {
     background-color: gray;
@@ -18,10 +22,18 @@ button:hover {
 h1 {
     color: black;
     text-align: center;
+    font-family: 'Barriecito', cursive;
+    font-family: 'Neuton', serif;
+    font-family: 'Pangolin', cursive;
+    font-family: 'Roboto', sans-serif;
 }
 h2 {
     color: black;
     text-align: center;
+    font-family: 'Barriecito', cursive;
+    font-family: 'Neuton', serif;
+    font-family: 'Pangolin', cursive;
+    font-family: 'Roboto', sans-serif;
 }
 .table-container {
     max-width: 800px;
@@ -40,6 +52,10 @@ h2 {
     text-align: left;
     border-bottom: 1px solid white;
     font-size: 20px;
+    font-family: 'Barriecito', cursive;
+    font-family: 'Neuton', serif;
+    font-family: 'Pangolin', cursive;
+    font-family: 'Roboto', sans-serif;
 }
 #data-table th {
     background-color: gray;

@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>Add Item Продавница</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -16,25 +17,27 @@
   
     <div>
         <form id="form">
-            <p>Артикал <br />
-                <input type="text" id="text" value="" /> 
+            <p class="articleName">Артикал <br />
+                <input type="text" id="articleName" value="" /> 
             </p>
             <p class="SKU">Шифра <br /> 
-                <input type="text" id="text"/> 
+                <input type="text" id="sku"/> 
+            </p>
+            <p class="price">Цена <br /> 
+                <input type="text" id="price"/> 
             </p>
             <p>Количина <br />
                 <input type="number" id="quantity" value="" />
             </p>
             
         <div class="button-container">
-            <button type="button" onclick="addBook()">Додади</button>
-            <button type="button" onclick="clearForm()">Откажи</button>
+            <button type="button" onclick="addItem()">Додади</button>
+            <button type="button" onclick="window.location.href = 'home.html';">Откажи</button>
         </div>
         </form>
     </div>
 
     <script src="ajax.js"></script>
-    <script src="script.js"></script>
 </body>
 
 </html>
