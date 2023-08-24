@@ -43,4 +43,9 @@ public class ItemService {
             itemRepository.updateQuantityBySku(sku, quantity);
         }
     }
+
+    @Transactional
+    public void deleteBySku(Integer sku) {
+        itemRepository.deleteBySku(sku);
+    }
 }

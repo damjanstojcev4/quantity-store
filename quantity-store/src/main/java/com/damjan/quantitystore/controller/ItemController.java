@@ -38,4 +38,10 @@ public class ItemController {
         return ResponseEntity.ok("Item quantity updated successfully");
     }
 
+    @DeleteMapping("/delete/{sku}")
+    public ResponseEntity<Void> deleteItemBySku(@PathVariable Integer sku) {
+        itemService.deleteBySku(sku);
+        return ResponseEntity.noContent().build();
+    }
+
 }

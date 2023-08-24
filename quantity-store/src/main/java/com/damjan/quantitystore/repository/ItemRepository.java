@@ -18,5 +18,6 @@ public interface ItemRepository extends JpaRepository<Item, Integer> {
     @Query("UPDATE Item i SET i.quantity = :quantity WHERE i.sku = :sku")
     void updateQuantityBySku(@Param("sku") Integer sku, @Param("quantity") int quantity);
 
+    void deleteBySku(Integer sku);
 
 }
