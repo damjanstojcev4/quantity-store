@@ -89,3 +89,26 @@ th.sticky {
     top: 0;
     z-index: 1;
 }
+.social h5 {
+    display: inline-block; /* Change from display: block; to display: inline-block; */
+    margin-right: 22px;
+    margin-bottom: 30px;
+}
+
+.social a {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: gray;
+    font-size: 17px;
+    color: white; /* Change to a contrasting color for better readability */
+}
+
+.social a:hover {
+    transform: scale(1.1);
+    background: black; /* Change to a different color on hover */
+    transition: 0.5s;
+}
