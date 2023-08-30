@@ -10,6 +10,7 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
@@ -34,10 +35,11 @@ public class ExcelService {
         // Format the current date to "dd-MM-yyyy" format
         DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
         String currentDate = LocalDate.now().format(dateFormatter);
+        String fileName = "MesecenPopis_" + currentDate + ".xlsx";
 
         // Set the content disposition header with the file name
-        // pateka za download
-        headers.setContentDispositionFormData("attachment", "popis_" + currentDate + ".xlsx");
+        String encodedFileName = new String(fileName.getBytes(StandardCharsets.UTF_8), StandardCharsets.ISO_8859_1);
+        headers.setContentDispositionFormData("attachment", encodedFileName);
 
         return ResponseEntity.ok()
                 .headers(headers)
