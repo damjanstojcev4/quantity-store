@@ -4,12 +4,14 @@ import com.damjan.quantitystore.domain.Item;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.springframework.stereotype.Component;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
+@Component
 public class ExcelGenerator {
     public byte[] generateExcel(List<Item> items) throws IOException {
         XSSFWorkbook workbook = new XSSFWorkbook();
