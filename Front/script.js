@@ -17,6 +17,7 @@ function createTable(data) {
         row.innerHTML = `
             <td>${item.articleName}</td>
             <td>${item.sku}</td>
+            <td>${item.price}</td>
             <td>${item.quantity}</td>
             <td><button onclick="clickButton(${item.quantity},'${item.articleName}')">Edit</button></td>
         `;
@@ -43,6 +44,10 @@ function prepareTableRow(json) {
         let skuCell = document.createElement("td");
         skuCell.textContent = json.sku;
         newRow.appendChild(skuCell);
+
+        let priceCell = document.createElement("td");
+        priceCell.textContent = json.price;
+        newRow.appendChild(priceCell);
         
         let quantityCell = document.createElement("td");
         quantityCell.textContent = json.quantity;
@@ -83,11 +88,13 @@ function loadOneSku(event) {
 function prepareArticle(json) {
         document.getElementById("articleName").textContent = json.articleName;
         document.getElementById("sku").value = json.sku;
+        document.getElementById("price").value = json.price;
         document.getElementById("quantity").textContent = json.quantity;  
     
     item = {
        articleName: json.articleName,
        sku: json.sku,
+       price: json.price,
        quantity: json.quantity
     }
  }
