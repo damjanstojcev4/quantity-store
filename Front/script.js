@@ -1,5 +1,6 @@
 let url = "http://localhost:1010/linkesti/"
 let url1 = "http://localhost:1010/linkesti/add"
+let ur2 = "http://localhost:1010/linkesti/download-excel"
 
 let init = {
     mode: 'cors',
@@ -117,3 +118,24 @@ function prepareArticle(json) {
     init.body = JSON.stringify(articleData);
     fetch(url1, init).then(() => console.log("Success"));
  }
+
+ function downloadExcel() {
+    fetch(ur2)
+        .then(response => response.blob())
+        .then(blob => {
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+
+            const currentDate = new Date();
+            const formattedDate = `${currentDate.getDate()}-${currentDate.getMonth() + 1}-${currentDate.getFullYear()}`;
+            const encodedFileName = `MesecenPopis_${formattedDate}.xlsx`;
+
+            a.download = encodedFileName;
+            a.click();
+            window.URL.revokeObjectURL(url);
+        })
+        .catch(error => {
+            console.error('Error downloading Excel:', error);
+        });
+}
