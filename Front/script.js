@@ -1,6 +1,7 @@
 let url = "http://localhost:1010/linkesti/"
 let url1 = "http://localhost:1010/linkesti/add"
 let ur2 = "http://localhost:1010/linkesti/download-excel"
+let url3 = "http://localhost:1010/linkesti/update"
 
 let init = {
     mode: 'cors',
@@ -15,44 +16,34 @@ function createTable(data) {
 
     data.forEach(item => {
         const row = document.createElement('tr');
+        row.id= item.sku;
         row.innerHTML = `
             <td>${item.articleName}</td>
             <td>${item.sku}</td>
             <td>${item.price}</td>
             <td>${item.quantity}</td>
-            <td><button onclick="clickButton(${item.quantity},'${item.articleName}')">Edit</button></td>
+            <td><button onclick="clickButton(${item.quantity},'${item.articleName}', ${item.sku})">Edit</button></td>
         `;
         tableBody.appendChild(row);
     });
 }
 
-function clickButton(quantity, name){
-    alert(`${name} ${quantity}`);
-}
 
 fetch(url)
     .then(response => response.json())
     .then(data => createTable(data))
     .catch(error => console.error('Error fetching data:', error));
 
-function prepareTableRow(json) {
+function prepareTableRow({articleName, sku, price,quantity}) {
         let newRow = document.createElement("tr");
-        
-        let articleCell = document.createElement("td");
-        articleCell.textContent = json.articleName;
-        newRow.appendChild(articleCell);
-        
-        let skuCell = document.createElement("td");
-        skuCell.textContent = json.sku;
-        newRow.appendChild(skuCell);
-
-        let priceCell = document.createElement("td");
-        priceCell.textContent = json.price;
-        newRow.appendChild(priceCell);
-        
-        let quantityCell = document.createElement("td");
-        quantityCell.textContent = json.quantity;
-        newRow.appendChild(quantityCell);
+        newRow.id = sku;
+        newRow.innerHTML = `
+            <td>${articleName}</td>
+            <td>${sku}</td>
+            <td>${price}</td>
+            <td>${quantity}</td>
+            <td><button onclick="clickButton(${quantity},'${articleName}',${sku})">Edit</button></td>
+        `;
         
         document.getElementById("table-body").innerHTML = ""; // Clear existing rows
         document.getElementById("table-body").appendChild(newRow);
@@ -139,3 +130,66 @@ function prepareArticle(json) {
             console.error('Error downloading Excel:', error);
         });
 }
+
+const updateButton = document.getElementById("updateBtn");
+const cancelButton = document.getElementById("cancel");
+const dialog = document.getElementById("favDialog");
+dialog.returnValue = "favAnimal";
+
+let globalSku = null;
+
+function openCheck(dialog) {
+  if (dialog.open) {
+    console.log("Dialog open");
+  } else {
+    console.log("Dialog closed");
+  }
+}
+
+
+function clickButton(quantity, name, sku){
+    dialog.showModal();
+    openCheck(dialog);
+    document.querySelector(
+'#counter'
+    ).value= quantity;
+    console.log(sku)
+    globalSku=sku;
+}
+
+// Form cancel button closes the dialog box
+cancelButton.addEventListener("click", () => {
+  dialog.close("Cancel");
+  openCheck(dialog);
+});
+
+updateButton.addEventListener('click',(e)=>{
+    e.preventDefault()
+    const quantity = document.querySelector('#counter').value;
+
+    //make fetch request here
+
+
+    //if request success update value
+    const apiUrl = `http://localhost:1010/linkesti/update?sku=${globalSku}&quantity=${quantity}`;
+
+    fetch(apiUrl, {
+        method: 'PUT'
+    })
+        .then(response => {
+            if (response.ok) {
+                return response.text();
+            } else {
+                throw new Error('Fetch request failed:', response.status, response.statusText);
+            }
+        })
+        .then(responseText => {
+            // Fetch request successful
+            document.getElementById(globalSku.toString()).getElementsByTagName('td')[3].innerText = quantity;
+            dialog.close("Cancel");
+        })
+        .catch(error => {
+            console.error('An error occurred:', error);
+        });
+
+});

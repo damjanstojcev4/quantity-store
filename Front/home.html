@@ -23,7 +23,7 @@
         <thead>
             <tr>
                 <th class="sticky" id="articleName">Артикал</th>
-                <th class="sticky">Шифра <input type="number" id="sku" onkeyup="loadOneSku(event)"/></th>
+                <th class="sticky">Шифра <input type="number" id="sku" placeholder="Внеси Шифра" onkeyup="loadOneSku(event)"/></th>
                 <th class="sticky" id="price">Цена</th>
                 <th class="sticky" id="quantity" colspan="2">Количина</th>
             </tr>
@@ -40,6 +40,22 @@
         <h5><a href="https://www.facebook.com/damjan.stojcev.3" target="_blank"><i class='bx bxl-facebook'></i></a></h5>
         <h5><a href="https://www.linkedin.com/in/damjan-stojcev-27201b247/" target="_blank"><i class='bx bxl-linkedin' ></i></a></h5>
     </div>
+
+    <!-- pop-up dialog box, containing a form -->
+<dialog id="favDialog">
+    <form id="updateForm">
+      <div>
+        <label for="counter">Внеси Количина:</label>
+        <input type="number" name="counter" id="counter" placeholder="Внеси Количина"/>
+      </div>
+      <div>
+        <button id="cancel" type="reset">Cancel</button>
+        <button id="updateBtn">Измени</button>
+      </div>
+    </form>
+  </dialog>
+
+  
 
     <script src="script.js"></script>
     <script src="ajax.js"></script>
