@@ -112,7 +112,6 @@ th.sticky {
     background: black; /* Change to a different color on hover */
     transition: 0.5s;
 }
-form input {
+#updateForm input {
     margin: 20px 0;
 }
-
