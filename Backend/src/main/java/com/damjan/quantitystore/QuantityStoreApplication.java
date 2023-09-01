@@ -9,5 +9,4 @@ public class QuantityStoreApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(QuantityStoreApplication.class, args);
 	}
-
 }
