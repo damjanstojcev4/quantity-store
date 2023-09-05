@@ -4,6 +4,7 @@ let ur2 = "http://localhost:1010/linkesti/download-excel"
 let url3 = "http://localhost:1010/linkesti/update"
 
 let init = {
+    method: 'cors',
     method: 'get',
     headers: {
        'Content-Type': 'application/json; charset=UTF-8',
