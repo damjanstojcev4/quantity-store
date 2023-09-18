@@ -1,16 +1,16 @@
-let url = "http://localhost:1010/linkesti/"
-let url1 = "http://localhost:1010/linkesti/add"
-let ur2 = "http://localhost:1010/linkesti/download-excel"
-let url3 = "http://localhost:1010/linkesti/update"
+let url = "http://linkestiback:1010/linkesti/"
+let url1 = "http://linkestiback:1010/linkesti/add"
+let ur2 = "http://linkestiback:1010/linkesti/download-excel"
+let url3 = "http://linkestiback:1010/linkesti/update"
 
 let init = {
-    method: 'cors',
-    method: 'get',
+    method: 'GET',
     headers: {
-       'Content-Type': 'application/json; charset=UTF-8',
-    }
- };
-
+      'Content-Type': 'application/json; charset=UTF-8',
+    },
+    mode: 'cors', // Optional, add this if it's a cross-origin request
+  };
+  
 function createTable(data) {
     const tableBody = document.getElementById('table-body');
 
