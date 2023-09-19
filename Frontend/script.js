@@ -1,7 +1,7 @@
-let url = "http://linkestiback:1010/linkesti/"
-let url1 = "http://linkestiback:1010/linkesti/add"
-let ur2 = "http://linkestiback:1010/linkesti/download-excel"
-let url3 = "http://linkestiback:1010/linkesti/update"
+let url = "http://localhost:1010/linkesti/"
+let url1 = "http://localhost:1010/linkesti/add"
+let ur2 = "http://localhost:1010/linkesti/download-excel"
+let url3 = "http://localhost:1010/linkesti/update"
 
 let init = {
     method: 'GET',
