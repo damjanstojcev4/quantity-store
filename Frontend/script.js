@@ -1,6 +1,6 @@
 let url = "http://localhost:1010/linkesti/"
 let url1 = "http://localhost:1010/linkesti/add"
-let ur2 = "http://localhost:1010/linkesti/download-excel"
+let url2 = "http://localhost:1010/linkesti/download-excel"
 let url3 = "http://localhost:1010/linkesti/update"
 
 let init = {
@@ -111,7 +111,7 @@ function prepareArticle(json) {
  }
 
  function downloadExcel() {
-    fetch(ur2)
+    fetch(url2)
         .then(response => response.blob())
         .then(blob => {
             const url = window.URL.createObjectURL(blob);
