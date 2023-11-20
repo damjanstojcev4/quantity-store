@@ -37,10 +37,10 @@ public class ItemService {
     @Transactional
     public void updateItemQuantity(Integer sku, Integer quantity) {
         Item item = itemRepository.findBySku(sku);
-        if (item != null) {
-            int oldQuantity = item.getQuantity();
+        if (item != null && item.getQuantity() != quantity) {
             item.setQuantity(quantity);
             itemRepository.updateQuantityBySku(sku, quantity);
+            // You can log the update here if needed
         }
     }
 
